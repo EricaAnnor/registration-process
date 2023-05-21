@@ -1,0 +1,17 @@
+extends ./layouts/registerlayout.pug
+block content 
+    .container 
+        h1 Register
+            form#data(method="post" )
+                p.errorMessage  #{errorMessage}
+
+                input(type="text", name="firstName", placeholder="Firstname",value=firstName required="")
+                input(type="text", name="lastName", placeholder="Lastname",value=lastName required="")
+                input(type="text", name="userName", placeholder="Username",value=userName required="")
+                input(type="email", name="email", placeholder="Email",value=email required="")
+                input#pass(type="password", name="password", placeholder="Password", required="")
+                input(type="submit", value="Register")
+            a(href="/login") Already have an account? Login here.  
+
+
+    
